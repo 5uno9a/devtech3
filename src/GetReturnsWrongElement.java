@@ -1,12 +1,12 @@
 /**
- * @author Yazod_Albusaidi
+ * Broken implementation for testGetAtIndex.
+ * @author Y
+ * TODO: Y implements broken behavior so this test fails when SHOULD_FAIL is true.
  */
 public class GetReturnsWrongElement<E> extends DoublyLinkedList<E> {
-
     @Override
     public E get(int index) {
-        // Incorrectly ignores the requested index and always returns the first element
-        return super.get(0);
+        return super.get(index); // TODO: replace with broken behavior
     }
 }
 

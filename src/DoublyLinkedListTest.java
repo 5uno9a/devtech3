@@ -21,7 +21,7 @@ public class DoublyLinkedListTest {
     // Tests for get
 
     /**
-     * @author grayson_replace_this
+     * @author Y
      * @see GetAtOutOfBoundsThrowsException
      */
     @Test
@@ -60,10 +60,7 @@ public class DoublyLinkedListTest {
     @Test
     public void testGetFirstOnNonEmptyListReturnsFirstElement() {
         if (SHOULD_FAIL) list = new GetFirstReturnsWrongElement<>();
-
-        list.addLast(10);
-        list.addLast(20);
-        assertEquals(10, list.getFirst());
+        fail("Not yet implemented");
     }
 
     // Tests for getLast
@@ -90,8 +87,7 @@ public class DoublyLinkedListTest {
     @Test
     public void testIsEmptyWhenCreated() {
         if (SHOULD_FAIL) list = new IsEmptyOnNewListReturnsFalse<>();
-
-        assertTrue(list.isEmpty());
+        fail("Not yet implemented");
     }
 
     // Tests for add
@@ -114,41 +110,98 @@ public class DoublyLinkedListTest {
 
     /**
      * @author Y
-     * @see
+     * @see AddFirstDoesNotAddElement
      */
     @Test
     public void testAddFirstAddsElement() {
+        if (SHOULD_FAIL) list = new AddFirstDoesNotAddElement<>();
         fail("Not yet implemented");
     }
 
     // Tests for addLast
 
     /**
-     * @author
-     * @see
+     * @author Yazeed_Albusaidi
+     * @see AddLastDoesNotAddElement
      */
     @Test
     public void testAddLastAddsElement() {
-        fail("Not yet implemented");
+        if (SHOULD_FAIL) list = new AddLastDoesNotAddElement<>();
+
+        list.addLast(10);
+        list.addLast(20);
+        assertEquals(2, list.size());
+        assertEquals(10, list.get(0));
+        assertEquals(20, list.get(1));
     }
 
     // Tests for remove
 
     /**
-     * @author
-     * @see
+     * @author Y
+     * @see RemoveAtIndexReturnsWrongElement
      */
     @Test
     public void testRemoveAtIndex() {
+        if (SHOULD_FAIL) list = new RemoveAtIndexReturnsWrongElement<>();
         fail("Not yet implemented");
     }
 
     // Tests for removeFirst
 
+    /**
+     * @author Yazeed_Albusaidi
+     * @see RemoveFirstReturnsWrongElement
+     */
+    @Test
+    public void testRemoveFirstReturnsFirstElement() {
+        if (SHOULD_FAIL) list = new RemoveFirstReturnsWrongElement<>();
+
+        list.addLast(10);
+        list.addLast(20);
+        assertEquals(10, list.removeFirst());
+        assertEquals(1, list.size());
+        assertEquals(20, list.get(0));
+    }
+
     // Tests for removeLast
+
+    /**
+     * @author Y
+     * @see RemoveLastReturnsWrongElement
+     */
+    @Test
+    public void testRemoveLastReturnsLastElement() {
+        if (SHOULD_FAIL) list = new RemoveLastReturnsWrongElement<>();
+        fail("Not yet implemented");
+    }
 
     // Tests for size
 
+    /**
+     * @author Yazeed_Albusaidi
+     * @see SizeReturnsWrongValue
+     */
+    @Test
+    public void testSizeReturnsCorrectCount() {
+        if (SHOULD_FAIL) list = new SizeReturnsWrongValue<>();
+
+        assertTrue(list.isEmpty());
+        assertEquals(0, list.size());
+        list.addLast(1);
+        list.addLast(2);
+        assertEquals(2, list.size());
+    }
+
     // Tests for set
 
+    /**
+     * @author Y
+     * @see SetReturnsWrongElement
+     */
+    @Test
+    public void testSetReplacesElementAtIndex() {
+        if (SHOULD_FAIL) list = new SetReturnsWrongElement<>();
+        fail("Not yet implemented");
+    }
 }

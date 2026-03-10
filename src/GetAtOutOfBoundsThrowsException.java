@@ -1,10 +1,10 @@
 /**
- * @author grayson_replace_this
+ * Broken implementation for testGetAtOutOfBoundsThrowsException.
+ * @author Yazeed_Albusaidi
  */
 public class GetAtOutOfBoundsThrowsException<E> extends DoublyLinkedList<E> {
     @Override
     public E get(int index) {
-        // Forces all gets to be within the bounds of the list
         return super.get(Math.min(super.size() - 1, Math.max(0, index)));
     }
 }
